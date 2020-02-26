@@ -6,40 +6,40 @@ import java.io.File;
 
 public class gui {
     gui() {
-        JFrame farme = new JFrame("拯救学委2.0");
+        JFrame frame = new JFrame("拯救学委2.0");
 
         // 设置窗口位于屏幕中间
         int sWidth = Toolkit.getDefaultToolkit().getScreenSize().width;
         int sHeight = Toolkit.getDefaultToolkit().getScreenSize().height;
         int winX = (sWidth - 500) / 2;
         int winY = (sHeight - 300) / 2;
-        farme.setBounds(winX + 50, winY + 50, 500, 300);
-        farme.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        farme.setLayout(null);
+        frame.setBounds(winX + 50, winY + 50, 500, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(null);
 
         int midX = 500 / 2 - 120 / 2;
         int midY = 300 / 2 - 30 / 2;
 
         JTextField text1 = new JTextField();
         text1.setBounds(midX, midY - 35, 120, 30);
-        farme.add(text1);
+        frame.add(text1);
 
         JTextField text2 = new JTextField();
         text2.setBounds(midX, midY - 75, 120, 30);
-        farme.add(text2);
+        frame.add(text2);
 
         JLabel label1 = new JLabel("目标文件夹:");
         label1.setBounds(midX - 80, midY - 35, 70, 30);
-        farme.add(label1);
+        frame.add(label1);
 
         JLabel label2 = new JLabel("关键字:");
         label2.setBounds(midX - 80, midY - 75, 70, 30);
-        farme.add(label2);
+        frame.add(label2);
 
         JScrollPane scrollPane_1 = new JScrollPane();
         scrollPane_1.setBounds(0, 130, 175, 120);
         scrollPane_1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        farme.getContentPane().add(scrollPane_1);
+        frame.getContentPane().add(scrollPane_1);
         JTextArea area = new JTextArea(10, 40);
         area.setBounds(0, 130, 175, 120);
         scrollPane_1.setViewportView(area);
@@ -69,9 +69,9 @@ public class gui {
                 area.append("成功移动文件： " + total + " 个");
             }
         });
-        farme.add(button);
+        frame.add(button);
 
-        farme.setVisible(true);
+        frame.setVisible(true);
     }
 
     public static void main(String[] args) {
